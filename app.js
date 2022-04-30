@@ -4,6 +4,9 @@ const [jokeElement, jokeBtn, confing] = [
 	{ headers: { Accept: 'application/json' } },
 ];
 
+//Event listenr to replace a joke every click
+jokeBtn.addEventListener('click', generateJoke);
+
 //Function to generate a new joke
 function generateJoke() {
 	fetch('https://icanhazdadjoke.com', confing)
