@@ -1,4 +1,4 @@
-# Jokes_Application
+# Jokes Application
 A site that contains a database of jokes that are changed at the click of a button, The purpose of the project is to become familiar with the fetch() function that executes a http request to a remote server in order to obtain information and use it in our application.
 
 ## Technologies
