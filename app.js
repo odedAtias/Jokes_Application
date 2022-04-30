@@ -9,14 +9,8 @@ jokeBtn.addEventListener('click', generateJoke);
 
 //Function to generate a new joke
 async function generateJoke() {
-	const [res, data] = [
-		await fetch('https://icanhazdadjoke.com', confing),
-		await res.json(),
-	];
+	let res = await fetch('https://icanhazdadjoke.com', confing);
+	let data = await res.json();
 	jokeElement.innerHTML = data.joke;
 }
 generateJoke();
-
-// fetch('https://icanhazdadjoke.com', confing)
-// 	.then(respone => respone.json())
-// 	.then(data => (jokeElement.innerHTML = data.joke));
