@@ -8,9 +8,15 @@ const [jokeElement, jokeBtn, confing] = [
 jokeBtn.addEventListener('click', generateJoke);
 
 //Function to generate a new joke
-function generateJoke() {
-	fetch('https://icanhazdadjoke.com', confing)
-		.then(respone => respone.json())
-		.then(data => (jokeElement.innerHTML = data.joke));
+async function generateJoke() {
+	const [res, data] = [
+		await fetch('https://icanhazdadjoke.com', confing),
+		await res.json(),
+	];
+	jokeElement.innerHTML = data.joke;
 }
 generateJoke();
+
+// fetch('https://icanhazdadjoke.com', confing)
+// 	.then(respone => respone.json())
+// 	.then(data => (jokeElement.innerHTML = data.joke));
