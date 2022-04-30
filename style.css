@@ -23,6 +23,7 @@ main {
     max-width: 100%;
     width: 800px;
     overflow: hidden;
+    border: 1px black solid;
 }
 
 h3 {
@@ -43,9 +44,9 @@ button {
     color: aliceblue;
     cursor: pointer;
     padding: 13px 30px;
-    border: none;
     border-radius: 5px;
-    font-size: 15px;
+    font-size: 20px;
+    border: none;
 }
 
 button:active {
